@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -9,14 +10,21 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private GameObject PanelGameStart;
 
+    [Header("InGame UI")]
+    [SerializeField]
+    private TextMeshProUGUI textInGameScore;
+
     [Header("GameOver UI")]
     [SerializeField]
     private GameObject PanelGameOver;
+    [SerializeField]
+    private TextMeshProUGUI textGameOverScore;
     [SerializeField]
     private float timeStopTime;
 
     public bool IsGameStart { private set; get; } = false;
     public bool IsGameOver { private set; get; } = false;
+    private int currentScore = 0;
 
     private IEnumerator Start()
     {
@@ -41,11 +49,21 @@ public class GameController : MonoBehaviour
     public void GameStart()
     {
         PanelGameStart.SetActive(false);
+        textInGameScore.gameObject.SetActive(true);
+    }
+
+    public void IncreaseScore(int score = 5)
+    {
+        currentScore += score;
+        textInGameScore.text = currentScore.ToString();
     }
 
     public void GameOver()
     {
         IsGameOver = true;
+
+        textGameOverScore.text = currentScore.ToString();
+        textGameOverScore.gameObject.SetActive(false);
         PanelGameOver.SetActive(true);
         StartCoroutine("SlowAndStopTime");
     }

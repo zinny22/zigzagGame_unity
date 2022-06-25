@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour
                         Vector3 direction = Vector3.right;
                         Movement.MoveTo(direction);
                         transform.rotation = Quaternion.Euler(0, 90, 0);
+                        gameController.IncreaseScore();
                     }
                     else if (touchDif.x < 0 && Mathf.Abs(touchDif.y) < Mathf.Abs(touchDif.x))
                     {
@@ -74,7 +75,7 @@ public class PlayerController : MonoBehaviour
                         Vector3 direction = Vector3.forward;
                         Movement.MoveTo(direction);
                         transform.rotation = Quaternion.Euler(0, 0, 0);
-
+                        gameController.IncreaseScore();
                     }
                 }
                 //터치.
