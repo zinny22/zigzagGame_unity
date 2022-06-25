@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection;
 
     public Vector3 MoveDirection => moveDirection;
+    private float limitDeathY;
 
     [SerializeField]
     private Vector3 touchBeganPos;              //터치 시작 위치 
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         MoveTo(Vector3.forward);
+        limitDeathY = transform.position.y - transform.localScale.y * 0.5f;
     }
     // Start is called before the first frame update
     void Start()
@@ -71,6 +73,10 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("touch");
                 }
             }
+        }
+        if( transform.position.y < limitDeathY)
+        {
+            Debug.Log("gameover");
         }
 
     }
