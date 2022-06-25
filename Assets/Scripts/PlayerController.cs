@@ -5,10 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
-    private float moveSpeed;
-    private Vector3 moveDirection;
-
-    public Vector3 MoveDirection => moveDirection;
+    private GameController gameController;
+    private movement Movement;
     private float limitDeathY;
 
     [SerializeField]
@@ -19,19 +17,28 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        MoveTo(Vector3.forward);
+        Movement = GetComponent<movement>();
+        //Movement.MoveTo(Vector3.forward);
         limitDeathY = transform.position.y - transform.localScale.y * 0.5f;
     }
-    // Start is called before the first frame update
-    void Start()
+
+    private IEnumerator Start()
     {
-        
+        while (true)
+        {
+            if(gameController.IsGameStart == true)
+            {
+                Movement.MoveTo(Vector3.forward);
+
+                yield break;
+            }
+            yield return null;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += moveDirection * moveSpeed * Time.deltaTime;
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -56,15 +63,16 @@ public class PlayerController : MonoBehaviour
                     {
                         Debug.Log("right");
                         Vector3 direction = Vector3.right;
+                        Movement.MoveTo(direction);
                         transform.rotation = Quaternion.Euler(0, 90, 0);
-                        MoveTo(direction);
                     }
                     else if (touchDif.x < 0 && Mathf.Abs(touchDif.y) < Mathf.Abs(touchDif.x))
                     {
                         Debug.Log("Left");
                         Vector3 direction = Vector3.forward;
+                        Movement.MoveTo(direction);
                         transform.rotation = Quaternion.Euler(0, 0, 0);
-                        MoveTo(direction);
+
                     }
                 }
                 //터치.
@@ -79,10 +87,5 @@ public class PlayerController : MonoBehaviour
             Debug.Log("gameover");
         }
 
-    }
-
-    public void MoveTo(Vector3 direction)
-    {
-        moveDirection = direction;
     }
 }

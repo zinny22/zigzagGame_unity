@@ -351,6 +351,9 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/CameraController.cs"
+"Assets/Scripts/FadeEffect.cs"
+"Assets/Scripts/GameController.cs"
+"Assets/Scripts/movement.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/TileSpawner.cs"
 -langversion:9.0
