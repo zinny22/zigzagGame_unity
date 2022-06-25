@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{F75F7EF3-68D9-1B09-7B1E-F3BC5F25298A}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TileSpawner.cs">
+    <Files>
+      <File FileName="Assets/Scripts/TileSpawner.cs" Line="7" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ddae9740-aaa8-494c-975b-515456f58a59" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
