@@ -31,7 +31,7 @@ public class TileSpawner : MonoBehaviour
         tile.gameObject.SetActive(true);
 
         int index = Random.Range(0, 2);
-        Vector3 addPosition = index == 0 ? Vector3.right : Vector3.forward;
+        Vector3 addPosition = index == 0 ? new Vector3(2,0,0) : new Vector3(0,0,2);
         tile.position = currentTile.position + addPosition;
 
         currentTile = tile;
