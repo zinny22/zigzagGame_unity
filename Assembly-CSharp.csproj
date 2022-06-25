@@ -62,6 +62,7 @@
     <Compile Include="Assets/Scripts/FadeEffect.cs" />
     <Compile Include="Assets/Scripts/GameController.cs" />
     <Compile Include="Assets/Scripts/movement.cs" />
+    <Compile Include="Assets/Scripts/SceneLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
