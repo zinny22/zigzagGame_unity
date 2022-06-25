@@ -39,6 +39,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameController.IsGameOver == true) return;
+
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -82,9 +84,10 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+
         if( transform.position.y < limitDeathY)
         {
-            Debug.Log("gameover");
+            gameController.GameOver();
         }
 
     }
