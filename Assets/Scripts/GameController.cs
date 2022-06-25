@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
     private TextMeshProUGUI textGameOverScore;
     [SerializeField]
     private float timeStopTime;
+    [SerializeField]
+    private GameObject PanelScore;
 
     public bool IsGameStart { private set; get; } = false;
     public bool IsGameOver { private set; get; } = false;
@@ -63,8 +65,10 @@ public class GameController : MonoBehaviour
         IsGameOver = true;
 
         textGameOverScore.text = currentScore.ToString();
-        textGameOverScore.gameObject.SetActive(false);
+        //textGameOverScore.gameObject.SetActive(false);
+
         PanelGameOver.SetActive(true);
+        PanelScore.SetActive(true);
         StartCoroutine("SlowAndStopTime");
     }
 
