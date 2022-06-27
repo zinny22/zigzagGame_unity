@@ -356,6 +356,7 @@
 "Assets/Scripts/movement.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/SceneLoader.cs"
+"Assets/Scripts/Tile.cs"
 "Assets/Scripts/TileSpawner.cs"
 -langversion:9.0
 

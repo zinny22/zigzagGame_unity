@@ -23,6 +23,7 @@ public class TileSpawner : MonoBehaviour
     {
         GameObject clone = Instantiate(tilePrefab);
         clone.transform.SetParent(transform);
+        clone.GetComponent<Tile>().Setup(this);
         SpawnTile(clone.transform);
     }
 
