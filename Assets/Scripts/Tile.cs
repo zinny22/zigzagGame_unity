@@ -8,6 +8,7 @@ public class Tile : MonoBehaviour
     private float falldownTime = 2;
     private Rigidbody rigidbody;
     private TileSpawner tileSpawner = null;
+    private GameController gameController;
 
     private void Awake()
     {
@@ -34,7 +35,7 @@ public class Tile : MonoBehaviour
         yield return new WaitForSeconds(falldownTime);
         rigidbody.isKinematic = true;
 
-        if(tileSpawner != null)
+        if (tileSpawner != null)
         {
             tileSpawner.SpawnTile(this.transform);
         }

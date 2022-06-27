@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour
                     if (touchDif.y < 0 && Mathf.Abs(touchDif.y) > Mathf.Abs(touchDif.x))
                     {
                         Debug.Log("down");
+                        transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+
                     }
                     else if (touchDif.x > 0 && Mathf.Abs(touchDif.y) < Mathf.Abs(touchDif.x))
                     {
@@ -68,6 +70,7 @@ public class PlayerController : MonoBehaviour
                         Movement.MoveTo(direction);
                         transform.rotation = Quaternion.Euler(0, 90, 0);
                         gameController.IncreaseScore();
+
                     }
                     else if (touchDif.x < 0 && Mathf.Abs(touchDif.y) < Mathf.Abs(touchDif.x))
                     {

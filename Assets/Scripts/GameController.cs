@@ -54,7 +54,7 @@ public class GameController : MonoBehaviour
         textInGameScore.gameObject.SetActive(true);
     }
 
-    public void IncreaseScore(int score = 5)
+    public void IncreaseScore(int score = 2)
     {
         currentScore += score;
         textInGameScore.text = currentScore.ToString();

@@ -5,6 +5,8 @@ using UnityEngine;
 public class TileSpawner : MonoBehaviour
 {
     [SerializeField]
+    private GameController gameController;
+    [SerializeField]
     private GameObject tilePrefab;
     [SerializeField]
     private Transform currentTile;
@@ -36,5 +38,21 @@ public class TileSpawner : MonoBehaviour
         tile.position = currentTile.position + addPosition;
 
         currentTile = tile;
+
+        int spawnItem = Random.Range(0, 100);
+        if (spawnItem < 20)
+        {
+            tile.GetChild(1).gameObject.SetActive(true);
+            if (index == 0)
+            {
+                tile.GetChild(1).gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else
+            {
+                tile.GetChild(1).gameObject.transform.rotation = Quaternion.Euler(0, 100, 0);
+                tile.GetChild(1).gameObject.transform.position = new Vector3(0, 5.4f, 0);
+            }
+
+        }
     }
 }

@@ -353,6 +353,7 @@
 "Assets/Scripts/CameraController.cs"
 "Assets/Scripts/FadeEffect.cs"
 "Assets/Scripts/GameController.cs"
+"Assets/Scripts/item.cs"
 "Assets/Scripts/movement.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/SceneLoader.cs"
