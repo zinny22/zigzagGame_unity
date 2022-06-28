@@ -14,7 +14,11 @@ public class GameController : MonoBehaviour
 
     [Header("InGame UI")]
     [SerializeField]
+    private GameObject PanelGameScore;
+    [SerializeField]
     private TextMeshProUGUI textInGameScore;
+    [SerializeField]
+    private TextMeshProUGUI textInGameCoinScore;
 
     [Header("GameOver UI")]
     [SerializeField]
@@ -31,6 +35,7 @@ public class GameController : MonoBehaviour
     public bool IsGameStart { private set; get; } = false;
     public bool IsGameOver { private set; get; } = false;
     private int currentScore = 0;
+    private int currentCoin = 0; 
 
     private IEnumerator Start()
     {
@@ -58,7 +63,7 @@ public class GameController : MonoBehaviour
     public void GameStart()
     {
         PanelGameStart.SetActive(false);
-        textInGameScore.gameObject.SetActive(true);
+        PanelGameScore.SetActive(true);
     }
 
     public void IncreaseScore(int score = 1)
@@ -67,17 +72,24 @@ public class GameController : MonoBehaviour
         textInGameScore.text = currentScore.ToString();
     }
 
+    public void IncreaseCoin(int coin = 2)
+    {
+        currentCoin += coin;
+        textInGameCoinScore.text = currentCoin.ToString();
+    }
+
     public void GameOver()
     {
         IsGameOver = true;
 
         textGameOverScore.text = currentScore.ToString();
-        //textGameOverScore.gameObject.SetActive(false);
 
         PanelGameOver.SetActive(true);
         PanelScore.SetActive(true);
+        PanelGameScore.SetActive(false);
 
         int bestScore = PlayerPrefs.GetInt("BestScore");
+
         if(currentScore> bestScore)
         {
             PlayerPrefs.SetInt("BestScore", currentScore);
