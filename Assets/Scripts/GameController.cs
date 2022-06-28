@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour
     private FadeEffect[] fadeGameStart;
     [SerializeField]
     private GameObject PanelGameStart;
+    [SerializeField]
+    private TextMeshProUGUI textGameStartBestScore;
 
     [Header("InGame UI")]
     [SerializeField]
@@ -23,6 +25,8 @@ public class GameController : MonoBehaviour
     private float timeStopTime;
     [SerializeField]
     private GameObject PanelScore;
+    [SerializeField]
+    private TextMeshProUGUI textGameOverBestScore;
 
     public bool IsGameStart { private set; get; } = false;
     public bool IsGameOver { private set; get; } = false;
@@ -31,6 +35,9 @@ public class GameController : MonoBehaviour
     private IEnumerator Start()
     {
         Time.timeScale = 1;
+
+        int bestScore = PlayerPrefs.GetInt("BestScore");
+        textGameStartBestScore.text = bestScore.ToString();
 
         for( int i =0; i<fadeGameStart.Length; ++i)
         {
@@ -54,7 +61,7 @@ public class GameController : MonoBehaviour
         textInGameScore.gameObject.SetActive(true);
     }
 
-    public void IncreaseScore(int score = 2)
+    public void IncreaseScore(int score = 1)
     {
         currentScore += score;
         textInGameScore.text = currentScore.ToString();
@@ -69,6 +76,17 @@ public class GameController : MonoBehaviour
 
         PanelGameOver.SetActive(true);
         PanelScore.SetActive(true);
+
+        int bestScore = PlayerPrefs.GetInt("BestScore");
+        if(currentScore> bestScore)
+        {
+            PlayerPrefs.SetInt("BestScore", currentScore);
+            textGameOverBestScore.text = currentScore.ToString();
+        }
+        else
+        {
+            textGameOverBestScore.text = bestScore.ToString();
+        }
         StartCoroutine("SlowAndStopTime");
     }
 

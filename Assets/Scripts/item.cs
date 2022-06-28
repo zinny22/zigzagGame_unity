@@ -5,6 +5,7 @@ using UnityEngine;
 public class item : MonoBehaviour
 {
     private GameController gameController;
+
     private void EnterItem( Collider other)
     {
         if (other.tag.Equals("Player")){

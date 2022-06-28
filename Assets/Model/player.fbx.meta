@@ -3,7 +3,12 @@ guid: 3c9d8b615017b4f768bd82ad0efe84c5
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Ferret
+    second: {fileID: 2100000, guid: 06bc2bbc5a06a445bab3a30b5e45e1a9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -16,15 +21,16 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'LeftUpperLeg' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
-    animationCompression: 1
+    importConstraints: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -80,7 +86,72 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: player(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rig
+      parentName: player(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: root
+      parentName: Rig
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: body
+      parentName: root
+      position: {x: 2.1283148e-19, y: 0.0010133642, z: 0.007539395}
+      rotation: {x: 0.9415917, y: 8.9433874e-17, z: -8.943385e-17, w: 0.33675677}
+      scale: {x: 1, y: 0.99999976, z: 0.99999976}
+    - name: ear.L
+      parentName: body
+      position: {x: -0.001706521, y: 0.0031944318, z: 0.008247566}
+      rotation: {x: -0.18730582, y: -0.08817194, z: 0.416681, w: 0.88516617}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: ear.R
+      parentName: body
+      position: {x: 0.001706521, y: 0.0031944318, z: 0.008247566}
+      rotation: {x: -0.18730582, y: 0.08817194, z: -0.416681, w: 0.88516617}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: tail.01
+      parentName: body
+      position: {x: -1.5536778e-18, y: 0.0012321369, z: -0.0052537094}
+      rotation: {x: -0.000000047049454, y: -0.7820715, z: 0.6231888, w: 0.00000005904476}
+      scale: {x: 1.0000002, y: 1.0000001, z: 0.99999994}
+    - name: tail.02
+      parentName: tail.01
+      position: {x: 7.239512e-17, y: 0.004731536, z: 0}
+      rotation: {x: 0.07112529, y: -0.00000015132743, z: -8.70532e-10, w: 0.9974674}
+      scale: {x: 1.000001, y: 1.0000002, z: 1.000001}
+    - name: leg.F.L
+      parentName: body
+      position: {x: -0.0021318218, y: -0.00020988013, z: 0.0056995237}
+      rotation: {x: 0.00000004371139, y: -0, z: 1, w: -1.7763568e-15}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg.B.L
+      parentName: body
+      position: {x: -0.0021318218, y: -0.00020987957, z: -0.004356905}
+      rotation: {x: 0.00000004371139, y: -0, z: 1, w: -1.7763568e-15}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg.F.R
+      parentName: body
+      position: {x: 0.0021318218, y: -0.00020988013, z: 0.0056995237}
+      rotation: {x: 0.00000004371139, y: -0, z: 1, w: -1.7763568e-15}
+      scale: {x: 1, y: 1, z: 1}
+    - name: leg.B.R
+      parentName: body
+      position: {x: 0.0021318218, y: -0.00020987957, z: -0.004356905}
+      rotation: {x: 0.00000004371139, y: -0, z: 1, w: -1.7763568e-15}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mesh
+      parentName: player(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -91,13 +162,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
