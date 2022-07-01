@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     private GameController gameController;
     private movement Movement;
     private float limitDeathY;
+    private Animator animator;
+    private BoxCollider boxCollider;
 
     [SerializeField]
     private Vector3 touchBeganPos;              //터치 시작 위치 
@@ -18,6 +20,8 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         Movement = GetComponent<movement>();
+        animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider>();
         //Movement.MoveTo(Vector3.forward);
         limitDeathY = transform.position.y - transform.localScale.y * 0.5f;
     }
@@ -60,7 +64,17 @@ public class PlayerController : MonoBehaviour
                     if (touchDif.y < 0 && Mathf.Abs(touchDif.y) > Mathf.Abs(touchDif.x))
                     {
                         Debug.Log("down");
-                        transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                        animator.SetTrigger("down");
+                        //if (animator.GetBool("roll") == true)
+                        //{
+                        //    boxCollider.size= new Vector3(0.5f, 1f, 1f);
+                        //    boxCollider.center = new Vector3(0, 0.5f, 0);
+                        //}
+                        //else
+                        //{
+                        //    boxCollider.size = new Vector3(0, 1f, 0);
+                        //    boxCollider.center = new Vector3(0.5f, 2f,);
+                        //}
 
                     }
                     else if (touchDif.x > 0 && Mathf.Abs(touchDif.y) < Mathf.Abs(touchDif.x))

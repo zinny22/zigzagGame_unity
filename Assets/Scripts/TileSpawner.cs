@@ -26,6 +26,7 @@ public class TileSpawner : MonoBehaviour
         GameObject clone = Instantiate(tilePrefab);
         clone.transform.SetParent(transform);
         clone.GetComponent<Tile>().Setup(this);
+        clone.transform.GetChild(2).GetComponent<item>().SetUp(gameController);
         SpawnTile(clone.transform);
     }
 
@@ -53,6 +54,10 @@ public class TileSpawner : MonoBehaviour
                 tile.GetChild(1).gameObject.transform.position = new Vector3(0, 5.4f, 0);
             }
 
+        }
+        if (spawnItem < 10)
+        {
+            tile.GetChild(2).gameObject.SetActive(true);
         }
     }
 }

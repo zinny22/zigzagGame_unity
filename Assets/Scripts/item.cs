@@ -5,11 +5,37 @@ using UnityEngine;
 public class item : MonoBehaviour
 {
     private GameController gameController;
+    [SerializeField]
+    private GameObject itemgeteffectPrefab;
+    private float rotateSpeed;
 
-    private void EnterItem( Collider other)
+    public void SetUp(GameController gameController)
     {
-        if (other.tag.Equals("Player")){
-            gameController.GameOver();
+        this.gameController = gameController;
+        itemgeteffectPrefab = Instantiate(itemgeteffectPrefab, transform.position, Quaternion.identity);
+        itemgeteffectPrefab.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        rotateSpeed = Random.Range(10, 100);
+    }
+
+    private void Update()
+    {
+        transform.Rotate(new Vector3(1, 1, 0) * rotateSpeed * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag.Equals("Player"))
+        {
+            itemgeteffectPrefab.transform.position = transform.position;
+            itemgeteffectPrefab.SetActive(true);
+
+            gameController.IncreaseCoin();
+            gameObject.SetActive(false);
+
         }
     }
 }

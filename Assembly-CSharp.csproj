@@ -89,6 +89,8 @@
     <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsShareManager.cs" />
     <Compile Include="Assets/FacebookSDK/Examples/Windows/FBWindowsTournamentsManager.cs" />
     <Compile Include="Assets/FacebookSDK/Examples/Scripts/SubMenus/AppEvents.cs" />
+    <Compile Include="Assets/Scripts/ParticlrSystemController.cs" />
+    <Compile Include="Assets/Scripts/Bush.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/FacebookSDK/Plugins/Windows/LibFBGManaged.dll" />
