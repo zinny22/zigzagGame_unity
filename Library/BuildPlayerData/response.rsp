@@ -18,6 +18,8 @@
 -a="/Users/ziny/Desktop/game/zigzag/Library/PlayerScriptAssemblies/Unity.Services.Core.Threading.dll"
 -a="/Users/ziny/Desktop/game/zigzag/Library/PlayerScriptAssemblies/Unity.VisualScripting.State.dll"
 -a="/Users/ziny/Desktop/game/zigzag/Library/PlayerScriptAssemblies/Unity.Services.Core.Device.dll"
+-a="/Users/ziny/Desktop/game/zigzag/Library/PlayerScriptAssemblies/Unity.Recorder.dll"
+-a="/Users/ziny/Desktop/game/zigzag/Library/PlayerScriptAssemblies/Unity.Recorder.Base.dll"
 -a="/Users/ziny/Desktop/game/zigzag/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/AOT/Newtonsoft.Json.dll"
 -a="/Users/ziny/Desktop/game/zigzag/Assets/FacebookSDK/Plugins/Android/Facebook.Unity.Android.dll"
 -a="/Users/ziny/Desktop/game/zigzag/Assets/FacebookSDK/Plugins/Windows/LibFBGManaged.dll"

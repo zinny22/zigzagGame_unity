@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
     {
         if (jDown && moveVec == Vector3.zero && !isJump)
         {
-            rigid.AddForce(Vector3.up * 5, ForceMode.Impulse);
+            rigid.AddForce(Vector3.up * 5f, ForceMode.Impulse);
         }
     }
     void OnCollisionEnter(Collision collision)

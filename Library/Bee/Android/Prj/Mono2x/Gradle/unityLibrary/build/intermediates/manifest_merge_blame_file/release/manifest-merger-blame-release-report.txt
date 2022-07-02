@@ -1,0 +1,148 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.unity3d.player"
+4    android:installLocation="preferExternal"
+5    android:versionCode="1"
+6    android:versionName="0.1" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="22"
+9-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml
+10        android:targetSdkVersion="30" />
+10-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml
+11
+12    <supports-screens
+12-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:3:3-163
+13        android:anyDensity="true"
+13-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:3:135-160
+14        android:largeScreens="true"
+14-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:3:78-105
+15        android:normalScreens="true"
+15-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:3:49-77
+16        android:smallScreens="true"
+16-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:3:21-48
+17        android:xlargeScreens="true" />
+17-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:3:106-134
+18
+19    <uses-feature android:glEsVersion="0x00030000" />
+19-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:19:3-52
+19-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:19:17-49
+20    <uses-feature
+20-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:20:3-91
+21        android:name="android.hardware.vulkan.version"
+21-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:20:17-63
+22        android:required="false" />
+22-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:20:64-88
+23
+24    <uses-permission android:name="android.permission.INTERNET" />
+24-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:21:3-65
+24-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:21:20-62
+25    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+25-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:22:3-77
+25-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:22:20-74
+26
+27    <uses-feature
+27-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:23:3-88
+28        android:name="android.hardware.touchscreen"
+28-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:23:17-60
+29        android:required="false" />
+29-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:23:61-85
+30    <uses-feature
+30-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:24:3-99
+31        android:name="android.hardware.touchscreen.multitouch"
+31-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:24:17-71
+32        android:required="false" />
+32-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:24:72-96
+33    <uses-feature
+33-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:25:3-108
+34        android:name="android.hardware.touchscreen.multitouch.distinct"
+34-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:25:17-80
+35        android:required="false" />
+35-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:25:81-105
+36
+37    <application
+37-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:4:3-18:17
+38        android:debuggable="true"
+38-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:4:108-133
+39        android:extractNativeLibs="true"
+39-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:4:134-166
+40        android:icon="@mipmap/app_icon"
+40-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:4:167-198
+41        android:label="@string/app_name"
+41-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:4:75-107
+42        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+42-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:4:16-74
+43        <activity
+43-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:5:5-12:16
+44            android:name="com.unity3d.player.UnityPlayerActivity"
+44-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:5:15-68
+45            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+45-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:5:173-354
+46            android:hardwareAccelerated="false"
+46-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:5:390-425
+47            android:label="@string/app_name"
+47-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:5:69-101
+48            android:launchMode="singleTask"
+48-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:5:141-172
+49            android:resizeableActivity="false"
+49-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:5:355-389
+50            android:screenOrientation="fullSensor" >
+50-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:5:102-140
+51            <intent-filter>
+51-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:6:7-9:23
+52                <action android:name="android.intent.action.MAIN" />
+52-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:7:9-61
+52-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:7:17-58
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:8:9-69
+54-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:8:19-66
+55            </intent-filter>
+56
+57            <meta-data
+57-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:10:7-82
+58                android:name="unityplayer.UnityActivity"
+58-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:10:18-58
+59                android:value="true" />
+59-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:10:59-79
+60            <meta-data
+60-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:11:7-78
+61                android:name="android.notch_support"
+61-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:11:18-54
+62                android:value="true" />
+62-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:11:55-75
+63        </activity>
+64
+65        <meta-data
+65-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:13:5-69
+66            android:name="unity.splash-mode"
+66-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:13:16-48
+67            android:value="0" />
+67-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:13:49-66
+68        <meta-data
+68-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:14:5-74
+69            android:name="unity.splash-enable"
+69-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:14:16-50
+70            android:value="True" />
+70-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:14:51-71
+71        <meta-data
+71-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:15:5-78
+72            android:name="unity.launch-fullscreen"
+72-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:15:16-54
+73            android:value="True" />
+73-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:15:55-75
+74        <meta-data
+74-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:16:5-84
+75            android:name="unity.allow-resizable-window"
+75-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:16:16-59
+76            android:value="False" />
+76-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:16:60-81
+77        <meta-data
+77-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:17:5-81
+78            android:name="notch.config"
+78-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:17:16-43
+79            android:value="portrait|landscape" />
+79-->/Users/ziny/Desktop/game/zigzag/Library/Bee/Android/Prj/Mono2x/Gradle/unityLibrary/src/main/AndroidManifest.xml:17:44-78
+80    </application>
+81
+82</manifest>

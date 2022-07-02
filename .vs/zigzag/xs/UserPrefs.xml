@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{12088D4F-AF06-F7F5-3F1B-A44A238CCB6C}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/movement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Tile.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="81" Column="52" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="118" Column="43" />
       <File FileName="Assets/Scripts/GameController.cs" Line="43" Column="43" />
-      <File FileName="Assets/Scripts/Tile.cs" Line="27" Column="54" />
+      <File FileName="Assets/Scripts/Tile.cs" Line="14" Column="6" />
       <File FileName="Assets/Scripts/ParticlrSystemController.cs" Line="15" Column="25" />
       <File FileName="Assets/Scripts/item.cs" Line="13" Column="1" />
       <File FileName="Assets/Scripts/Bush.cs" Line="6" Column="2" />
-      <File FileName="Assets/Scripts/TileSpawner.cs" Line="46" Column="57" />
+      <File FileName="Assets/Scripts/TileSpawner.cs" Line="44" Column="7" />
       <File FileName="Assets/Scripts/CameraController.cs" Line="20" Column="85" />
       <File FileName="Assets/Scripts/movement.cs" Line="1" Column="1" />
     </Files>
@@ -16,7 +16,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="14643b4a-8b4d-4103-8220-cd39f8774485" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/ziny/Desktop/game/zigzag/Assets/Scripts/PlayerController.cs" relfile="Assets/Scripts/PlayerController.cs" line="128" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
