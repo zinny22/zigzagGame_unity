@@ -60,6 +60,7 @@ public class GameController : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                animator.SetBool("start", true);
                 GameStart();
                 IsGameStart = true;
                 yield break;
@@ -72,7 +73,7 @@ public class GameController : MonoBehaviour
     {
         PanelGameStart.SetActive(false);
         PanelGameScore.SetActive(true);
-        animator.SetBool("start", true);
+
     }
 
     public void IncreaseScore(int score = 1)

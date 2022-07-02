@@ -8,7 +8,12 @@ public class item : MonoBehaviour
     [SerializeField]
     private GameObject itemgeteffectPrefab;
     private float rotateSpeed;
+    AudioSource audioSource;
 
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void SetUp(GameController gameController)
     {
         this.gameController = gameController;
@@ -30,6 +35,7 @@ public class item : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
+            audioSource.Play();
             itemgeteffectPrefab.transform.position = transform.position;
             itemgeteffectPrefab.SetActive(true);
 

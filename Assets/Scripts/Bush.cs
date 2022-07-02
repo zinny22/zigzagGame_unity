@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bush : MonoBehaviour
 {
+    [SerializeField]
     private GameController gameController;
 
     private void OnTriggerEnter(Collider other)
