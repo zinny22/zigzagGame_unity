@@ -41,6 +41,7 @@ public class TileSpawner : MonoBehaviour
         currentTile = tile;
 
         int spawnItem = Random.Range(0, 100);
+      
         if (spawnItem < 15)
         {
             tile.GetChild(1).gameObject.SetActive(true);

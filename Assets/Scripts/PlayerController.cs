@@ -115,8 +115,7 @@ public class PlayerController : MonoBehaviour
     {
         if (jDown && moveVec == Vector3.zero && !isJump)
         {
-            rigid.AddForce(Vector3.up * 6, ForceMode.Impulse);
-            isJump = true;
+            rigid.AddForce(Vector3.up * 5, ForceMode.Impulse);
         }
     }
     void OnCollisionEnter(Collision collision)
@@ -124,4 +123,5 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Ground")
             isJump = false;
     }
+
 }
