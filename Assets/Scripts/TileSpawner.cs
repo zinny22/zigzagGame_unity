@@ -41,7 +41,7 @@ public class TileSpawner : MonoBehaviour
         currentTile = tile;
 
         int spawnItem = Random.Range(0, 100);
-        if (spawnItem < 20)
+        if (spawnItem < 15)
         {
             tile.GetChild(1).gameObject.SetActive(true);
             if (index == 0)
@@ -50,9 +50,10 @@ public class TileSpawner : MonoBehaviour
             }
             else
             {
-                tile.GetChild(1).gameObject.transform.rotation = Quaternion.Euler(0, 100, 0);
-                tile.GetChild(1).gameObject.transform.position = new Vector3(0, 5.4f, 0);
+                tile.GetChild(1).gameObject.transform.rotation = Quaternion.Euler(0, -84, 0);
+                tile.GetChild(1).gameObject.transform.position = new Vector3(-0.5f, 5.4f, -0.9f);
             }
+
 
         }
         if (spawnItem < 10)

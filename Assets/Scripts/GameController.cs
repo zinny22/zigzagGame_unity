@@ -40,9 +40,19 @@ public class GameController : MonoBehaviour
     private int currentScore = 0;
     private int currentCoin = 0;
 
+    public static GameController Instance;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private IEnumerator Start()

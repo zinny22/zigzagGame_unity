@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Bush : MonoBehaviour
 {
-    [SerializeField]
-    private GameController gameController;
+    private void Start()
+    {
+        GetComponent<Rigidbody>().isKinematic = true;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Player"))
         {
-            gameController.GameOver();
+            GetComponent<Rigidbody>().isKinematic = false;
+            GameController.Instance.GameOver();
+ 
         }
     }
 }
