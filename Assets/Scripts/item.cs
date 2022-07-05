@@ -8,8 +8,7 @@ public class item : MonoBehaviour
     [SerializeField]
     private GameObject itemgeteffectPrefab;
     private float rotateSpeed;
-    AudioSource audioSource;
-    public AudioClip List;
+    public AudioSource audioSource;
     private void Start()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
@@ -36,10 +35,15 @@ public class item : MonoBehaviour
     {
         if (other.tag.Equals("Player"))
         {
-            audioSource.clip = List;
-            audioSource.Play();
             itemgeteffectPrefab.transform.position = transform.position;
             itemgeteffectPrefab.SetActive(true);
+            if (itemgeteffectPrefab == true)
+            {
+                GetComponent<AudioSource>().Play();
+            }
+            else{
+                GetComponent<AudioSource>().Stop();
+            }
 
             gameController.IncreaseCoin();
             gameObject.SetActive(false);

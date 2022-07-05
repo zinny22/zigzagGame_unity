@@ -62,7 +62,7 @@ public class GameController : MonoBehaviour
         int bestScore = PlayerPrefs.GetInt("BestScore");
         textGameStartBestScore.text = bestScore.ToString();
 
-        for( int i =0; i<fadeGameStart.Length; ++i)
+        for (int i = 0; i < fadeGameStart.Length; ++i)
         {
             fadeGameStart[i].FadeIn();
         }
@@ -100,6 +100,7 @@ public class GameController : MonoBehaviour
 
     public void GameOver()
     {
+        animator.SetBool("start", false);
         IsGameOver = true;
 
         textGameOverScore.text = currentScore.ToString();
@@ -108,11 +109,10 @@ public class GameController : MonoBehaviour
         PanelGameOver.SetActive(true);
         PanelScore.SetActive(true);
         PanelGameScore.SetActive(false);
-        animator.SetBool("over", true);
 
         int bestScore = PlayerPrefs.GetInt("BestScore");
 
-        if(currentScore > bestScore)
+        if (currentScore > bestScore)
         {
             PlayerPrefs.SetInt("BestScore", currentScore);
             textGameOverBestScore.text = currentScore.ToString();
@@ -126,19 +126,19 @@ public class GameController : MonoBehaviour
 
     private IEnumerator SlowAndStopTime()
     {
+        animator.SetBool("end", true);
         float current = 0;
         float percent = 0;
 
         Time.timeScale = 0.5f;
 
-        while(percent < 1)
+        while (percent < 1)
         {
             current += Time.deltaTime;
             percent = current / timeStopTime;
             yield return null;
         }
 
-        Time.timeScale = 0; 
-
+         Time.timeScale = 0;
     }
 }

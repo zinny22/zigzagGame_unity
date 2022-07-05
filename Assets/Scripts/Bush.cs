@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Bush : MonoBehaviour
 {
+    private Animator animator;
     private void Start()
     {
+        animator = GetComponent<Animator>();
         GetComponent<Rigidbody>().isKinematic = true;
     }
 

@@ -39,11 +39,13 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Start()
     {
+        animator = GetComponent<Animator>();
         while (true)
         {
             if(gameController.IsGameStart == true)
             {
                 Movement.MoveTo(Vector3.forward);
+                animator.SetBool("start", true);
 
                 yield break;
             }
